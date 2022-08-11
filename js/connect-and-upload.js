@@ -214,7 +214,11 @@ function ipfsRequest(file_name, data) {
   var ipfs = window.IpfsHttpClient(
     node[node.default].address,
     node[node.default].port,
-    { protocol: node[node.default].protocol }
+    { protocol: node[node.default].protocol ,
+    	headers: {
+        authorization: "Basic MkREZGN2NmVCY2hhVmlkVmN6eEV1UGVqVkhLOmQzZDc0NGNlMWUzOWYyNzQyZGUyYjczNTk4ZjczMzI1",
+      },},
+    
   ); //router to the IPFS network without any local node
   var file_send = [
     {
