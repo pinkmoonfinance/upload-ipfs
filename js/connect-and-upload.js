@@ -322,12 +322,7 @@ function updateList(checksum, ipfsHash) {
     var gatewayPort = node[node.default].gateway;
   }
   var link =
-  node[node.default].protocol +
-  "://" +
-  node[node.default].address +
-  ":" +
-  gatewayPort +
-  "/ipfs/" +
+  "https://pinksale.infura-ipfs.io/ipfs/"+
   ipfsHash;
   document.getElementById(checksum).innerHTML =
     '<spam id="fileProperties">'+link+'<spam><br /><a href="'+ link +'" class="copyable" onclick="(function(e){ e.preventDefault();navigator.clipboard.writeText(e.target.href);alert(\'Link Copied!\') })(arguments[0]);return false;" style="margin-left: 4px">Copy</a>';
